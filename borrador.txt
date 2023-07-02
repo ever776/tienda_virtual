@@ -1,0 +1,35 @@
+php artisan vendor:publish --provider="Appzcoder\CrudGenerator\CrudGeneratorServiceProvider"
+
+
+php artisan crud:generate Nacionalidad --fields="nombre#string;bandera#string;" --view-path=admin --controller-namespace=admin --route-group=admin
+
+
+
+php artisan crud:generate Proveedor --fields="nombre#string;propietario#string;cinit#string;telcelular#string;direccion#string;" --view-path=admin --controller-namespace=admin --route-group=admin
+
+
+
+php artisan crud:generate Clasificacion --fields="descrip#string;" --view-path=admin --controller-namespace=admin --route-group=admin
+
+
+php artisan crud:generate Marca --fields="nombre#string;logo#string;" --view-path=admin --controller-namespace=admin --route-group=admin
+
+
+php artisan crud:generate Producto --fields="nombre#string;descrip#string;precioant#decimal;precio#decimal;stock#integer;destacado#boolean;foto#string;clasificacion_id#integer;marca_id#integer;nacionalidad_id#integer;" --view-path=admin --controller-namespace=admin --route-group=admin
+
+
+
+php artisan crud:generate Ingreso --fields="fecha#date;cantidad#integer;preciounit#decimal;producto_id#integer;proveedor_id#integer;" --view-path=admin --controller-namespace=admin --route-group=admin
+
+
+php artisan crud:generate Jugador
+--fields="
+codigo#string;
+nombre#string;
+fnac#date;
+estatura#decimal;
+foto#string;
+"
+--view-path=admin
+--controller-namespace=admin
+--route-group=admin
